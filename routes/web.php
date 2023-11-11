@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\ConfirmationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/demo/registration');
 
+Route::get('/demo/registration', [RegistrationController::class, 'index'])->name('registration.index');
+Route::post('/demo/registration', [RegistrationController::class, 'store'])->name('registration.store');
+
+Route::get('/demo/confirmation', [ConfirmationController::class, 'index'])->name('demo.confirmation');
+
+/*
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+*/
