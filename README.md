@@ -1,66 +1,58 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Registration App (Demo)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Laravel 10 and Bootstrap 5 forked from template repository
 
-## About Laravel
+## Description + QnA
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Q : Buatlah sebuah halaman web dengan form pendaftaran yang berisi beberapa input, nama, email, dan alamat.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- A : Form registration terdiri dari 3 input yang diminta yaitu: nama, email, dan alamat.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### Q : Buatlah tabel "registrations" di database MySQL Anda dengan kolom-kolom yang sesuai untuk menyimpan data pendaftaran (kolom id, nama, email, alamat).
 
-## Learning Laravel
+- A : Gunakan [php artisan migrate] database registrations terdapat pada [database\migrations\2023_11_11_165018_create_registrations_table.php]
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### Q : Mengirimkan email notifikasi yang sudah melakukan registrasi.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- A : Email dikirimkan pada saat data telah tersimpan pada database. Dapat dilihat lebih jelas pada [app\Http\Controllers\RegistrationController.php]. Dan untuk struktur email dapat dilihat pada [resources\views\emails\registration-confirmation.blade.php]
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Q : Buatlah koneksi ke database MySQL dari halaman web menggunakan bahasa pemrograman PHP atau bahasa backend lainnya yang dikuasai.
 
-## Laravel Sponsors
+- A : Setting untuk database connection terdapat pada [.env] yang harus mengikuti [.env.example] yang ada.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### Q : Ketika pengguna mengisi dan mengirim form pendaftaran, data yang diinputkan harus divalidasi untuk memastikan tidak ada data yang kosong atau tidak valid. Setelah validasi berhasil, data yang diinputkan harus disimpan ke dalam tabel "registrations" di database MySQL.
 
-### Premium Partners
+- A : Pada input terdapat required. sehingga form tidak dapat dikosongkan.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+#### Q : Tampilkan pesan konfirmasi kepada pengguna bahwa pendaftaran berhasil dilakukan.
 
-## Contributing
+- A : Tampilan tersebut terdapat pada [localhost:3000/demo/confirmation] dan terdapat tombol untuk kembali pada halaman pendaftaran
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### Q : (Opsional) Buat halaman terpisah yang menampilkan daftar pendaftaran yang telah disimpan dalam database.
 
-## Code of Conduct
+- A : Penampilan daftar pendaftaran yang telah tersimpan oleh database merupakan informasi pribadi pendaftar. Memunginkan untuk membuat tampilan tersebut seperti [Nama:Per***, Email:Per***, Address:Hom***]
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Additional Note
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Q : Pastikan untuk menyimpan data dengan aman dan menerapkan metode sanitasi input untuk menghindari SQL injection.
 
-## License
+- A : Dapat dilihat pada [app\Http\Controllers\RegistrationController.php] sanitasi menggunakan fungsi [htmlspecialchars()]
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### Q : Jika belum memiliki pengalaman dengan MySQL atau PHP, diizinkan untuk menggunakan teknologi backend lainnya (seperti Node.js dengan database MongoDB atau lainnya).
+
+- A : Aplikasi dikembangkan dengan MySQL dan PHP pada XAMPP v.3.3.0
+
+#### Q : Jika menguasai mobile development (flutter), diperbolehkan membuat tampilan dalam bentuk android / ios dengan tetap membuat backend api.
+
+- A : Skipped
+
+## Additional Point
+
+- Menggunakan framework laravel seperti versi 10.x / django 4.x.
+
+- Menggunakan framework css seperti bootstrap versi 5.x / tailwind versi 3.x, / lain-lain.
+
+## Known Issues
+
+Will be listed soon
