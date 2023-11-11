@@ -22,6 +22,9 @@ class RegistrationController extends Controller
             'address' => 'required|string|max:255',
         ]);
 
+        $data['fullname'] = htmlspecialchars($data['fullname'], ENT_QUOTES, 'UTF-8');
+        $data['address'] = htmlspecialchars($data['address'], ENT_QUOTES, 'UTF-8');
+
         $registration = Registration::create($data);
 
         Mail::to($data['email'])->send(new RegistrationConfirmation($registration));
