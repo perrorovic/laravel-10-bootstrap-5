@@ -31,7 +31,7 @@ class RegistrationController extends Controller
             $registration = Registration::create($data);
 
             // Send mail after database insertion
-            // Mail::to($data['email'])->send(new RegistrationConfirmation($registration));
+            Mail::to($data['email'])->send(new RegistrationConfirmation($registration));
 
             // Redirect to [confirmation] page
             // return response()->json($registration, 201);
