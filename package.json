@@ -2,6 +2,9 @@
     "private": true,
     "scripts": {
         "start": "php artisan serve",
+        "db:new": "php artisan migrate",
+        "db:renew": "php artisan migrate:fresh",
+        "db:seed": "php artisan db:seed --class=RegistrationsTableSeeder",
         "dev": "vite",
         "build": "cross-env NODE_ENV=production vite build"
     },
