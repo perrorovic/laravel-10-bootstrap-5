@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\ConfirmationController;
+use App\Http\Controllers\FailedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::get('/demo/registration', [RegistrationController::class, 'index'])->name
 Route::post('/demo/registration', [RegistrationController::class, 'store'])->name('registration.store');
 
 Route::get('/demo/confirmation', [ConfirmationController::class, 'index'])->name('demo.confirmation');
+Route::get('/demo/failed', [FailedController::class, 'index'])->name('demo.failed');
 
 /*
 Auth::routes();

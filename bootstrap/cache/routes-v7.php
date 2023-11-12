@@ -44,7 +44,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::T04qhfr26WGJBQ1r',
+            '_route' => 'generated::BNzE8Eew6EoUqBPS',
           ),
           1 => NULL,
           2 => 
@@ -64,7 +64,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::F3evihCd4Kt30Ccc',
+            '_route' => 'generated::e8qZjyAvlJ7LirmJ',
           ),
           1 => NULL,
           2 => 
@@ -139,6 +139,26 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/demo/failed' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'demo.failed',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
@@ -187,7 +207,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::T04qhfr26WGJBQ1r' => 
+    'generated::BNzE8Eew6EoUqBPS' => 
     array (
       'methods' => 
       array (
@@ -204,13 +224,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000002de0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000002df0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::T04qhfr26WGJBQ1r',
+        'as' => 'generated::BNzE8Eew6EoUqBPS',
       ),
       'fallback' => false,
       'defaults' => 
@@ -226,7 +246,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::F3evihCd4Kt30Ccc' => 
+    'generated::e8qZjyAvlJ7LirmJ' => 
     array (
       'methods' => 
       array (
@@ -252,7 +272,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::F3evihCd4Kt30Ccc',
+        'as' => 'generated::e8qZjyAvlJ7LirmJ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -365,6 +385,43 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'demo.confirmation',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'demo.failed' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'demo/failed',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\FailedController@index',
+        'controller' => 'App\\Http\\Controllers\\FailedController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'demo.failed',
       ),
       'fallback' => false,
       'defaults' => 
