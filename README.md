@@ -10,9 +10,9 @@ https://github.com/perrorovic/laravel-registration-app/assets/114989131/67228e6e
 
 **Q : Buatlah sebuah halaman web dengan form pendaftaran yang berisi beberapa input, nama, email, dan alamat.**
 
-- A : Form registration terdiri dari 3 input yang diminta yaitu: nama, email, dan alamat.
+- A : Form registration terdapat pada [/demo/registration] terdiri dari 3 input yang diminta yaitu: nama, email, dan alamat.
 
-**Q : Buatlah tabel "registrations" di database MySQL Anda dengan kolom-kolom yang sesuai untuk menyimpan data pendaftaran (kolom id, nama, email, alamat).**
+**Q : Buatlah tabel "registrations" di database MySQL dengan kolom-kolom yang sesuai untuk menyimpan data pendaftaran (kolom id, nama, email, alamat).**
 
 - A : Gunakan [php artisan migrate] database registrations terdapat pada [database\migrations\2023_11_11_165018_create_registrations_table.php]
 
@@ -30,11 +30,11 @@ https://github.com/perrorovic/laravel-registration-app/assets/114989131/67228e6e
 
 **Q : Tampilkan pesan konfirmasi kepada pengguna bahwa pendaftaran berhasil dilakukan.**
 
-- A : Tampilan tersebut terdapat pada [localhost:3000/demo/confirmation] dan terdapat tombol untuk kembali pada halaman pendaftaran
+- A : Tampilan tersebut terdapat pada [/demo/confirmation] dan terdapat tombol untuk kembali pada halaman pendaftaran
 
 **Q : (Opsional) Buat halaman terpisah yang menampilkan daftar pendaftaran yang telah disimpan dalam database.**
 
-- A : Penampilan daftar pendaftaran yang telah tersimpan oleh database merupakan informasi pribadi pendaftar. Memunginkan untuk membuat tampilan tersebut seperti [Nama:PerXX...XXX, Email:PerXX...XXX, Address:HomXX...XXX]
+- A : Skipped. Penampilan daftar pendaftaran yang telah tersimpan oleh database merupakan informasi pribadi pendaftar. Memunginkan untuk membuat tampilan tersebut seperti [Nama:PerXX...XXX, Email:PerXX...XXX, Address:HomXX...XXX]. Terdapat database seeder yang telah diset pada [database\seeders\RegistrationsTableSeeder.php]
 
 
 ## Additional Note
@@ -49,7 +49,7 @@ https://github.com/perrorovic/laravel-registration-app/assets/114989131/67228e6e
 
 **Q : Jika menguasai mobile development (flutter), diperbolehkan membuat tampilan dalam bentuk android / ios dengan tetap membuat backend api.**
 
-- A : Skipped
+- A : Skipped.
 
 ## Additional Point
 
@@ -59,4 +59,4 @@ https://github.com/perrorovic/laravel-registration-app/assets/114989131/67228e6e
 
 ## Known Issues
 
-Will be listed soon
+- Both of [/demo/confirmation] and [/demo/failed] route is open and can be accessed directly. This route should be open only for those who pass it from [RegistrationController] (need to setup middleware)
