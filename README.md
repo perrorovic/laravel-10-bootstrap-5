@@ -2,6 +2,10 @@
 
 Laravel 10 and Bootstrap 5 forked from template repository
 
+Application demo are shown below : (8 MB)
+
+https://github.com/perrorovic/laravel-registration-app/assets/114989131/67228e6e-0b44-4117-a249-0a17824fcf4b
+
 ## Description + QnA
 
 **Q : Buatlah sebuah halaman web dengan form pendaftaran yang berisi beberapa input, nama, email, dan alamat.**
