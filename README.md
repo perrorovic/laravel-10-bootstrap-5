@@ -4,7 +4,7 @@ Laravel 10 and Bootstrap 5 forked from template repository
 
 Application demo are shown below : (8 MB)
 
-https://github.com/perrorovic/laravel-registration-app/assets/114989131/67228e6e-0b44-4117-a249-0a17824fcf4b
+https://github.com/perrorovic/laravel-registration-app/assets/114989131/b215ce8b-f1c4-43ac-ac4a-73d63bce244c
 
 ## Description + QnA
 
