@@ -31,7 +31,7 @@ https://github.com/perrorovic/laravel-registration-app/assets/114989131/b215ce8b
 
 > **Q : Buatlah koneksi ke database MySQL dari halaman web menggunakan bahasa pemrograman PHP atau bahasa backend lainnya yang dikuasai.**
 > 
->A : Setting untuk database connection terdapat pada [.env] yang harus mengikuti `.env.example` yang ada.
+>A : Setting untuk database connection terdapat pada `.env` yang harus mengikuti `.env.example` yang ada.
 
 > **Q : Ketika pengguna mengisi dan mengirim form pendaftaran, data yang diinputkan harus divalidasi untuk memastikan tidak ada data yang kosong atau tidak valid. Setelah validasi berhasil, data yang diinputkan harus disimpan ke dalam tabel "registrations" di database MySQL.**
 > 
