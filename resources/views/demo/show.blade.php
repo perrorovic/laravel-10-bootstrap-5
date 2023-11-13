@@ -34,7 +34,7 @@
             @foreach ($registrations as $registration)
             <div class="list-group-item">
                 <h5 class="mb-1">Fullname : {{ substr($registration->fullname, 0, 3) }}****</h5>
-                <p class="mb-1">Email : {{ substr($registration->address, 0, 4) }}****</p>
+                <p class="mb-1">Email : {{ substr($registration->email, 0, 4) }}****</p>
                 <small>Address : {{ substr($registration->address, 0, 5) }}****</small>
             </div>
             @endforeach
