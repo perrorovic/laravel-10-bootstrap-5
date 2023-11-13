@@ -8,9 +8,10 @@ use Illuminate\Support\Str;
 
 class Registration extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['fullname', 'email', 'address'];
 
-    // Assuming you want to use UUIDs for the 'uuid' field
     protected static function boot()
     {
         parent::boot();

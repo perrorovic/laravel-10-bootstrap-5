@@ -34,7 +34,7 @@ https://github.com/perrorovic/laravel-registration-app/assets/114989131/67228e6e
 
 **Q : (Opsional) Buat halaman terpisah yang menampilkan daftar pendaftaran yang telah disimpan dalam database.**
 
-- A : Skipped. Penampilan daftar pendaftaran yang telah tersimpan oleh database merupakan informasi pribadi pendaftar. Memunginkan untuk membuat tampilan tersebut seperti [Nama:PerXX...XXX, Email:PerXX...XXX, Address:HomXX...XXX]. Terdapat database seeder yang telah diset pada [database\seeders\RegistrationsTableSeeder.php]
+- A : Skipped. Penampilan daftar pendaftaran yang telah tersimpan oleh database merupakan informasi pribadi pendaftar. Memunginkan untuk membuat tampilan tersebut seperti [Nama:PerXXXX, Email:PerXXXX, Address:HomXXXX]. Terdapat database seeder yang telah diset pada [database\seeders\RegistrationsTableSeeder.php]
 
 
 ## Additional Note

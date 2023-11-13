@@ -4,11 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Registration;
 
 class RegistrationsTableSeeder extends Seeder
 {
     public function run()
     {
+        // This create a random data from [database\factories\RegistrationFactory.php]
+        // It should work but i dont know why it doesnt...
+        // Registration::factory(10)->create();
+        
+        // Static seeder
         $data = [
             [
                 'uuid' => \Ramsey\Uuid\Uuid::uuid4()->toString(),
@@ -33,10 +39,11 @@ class RegistrationsTableSeeder extends Seeder
                 'address' => 'Example Address No.3',
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],
+            ]
         ];
 
         DB::table('registrations')->insert($data);
+        
     }
 }
 

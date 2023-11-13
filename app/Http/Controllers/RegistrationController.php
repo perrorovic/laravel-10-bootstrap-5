@@ -15,6 +15,18 @@ class RegistrationController extends Controller
         return view('demo.registration');
     }
 
+    public function show()
+    {
+        // Need to somehow display it correctly...
+        $registrations = Registration::all();
+        // I dont make a [id] for the data. ill just use [created_at] because it static and cant be change 
+        // therefore sufficient for replacing the normal [id] 
+        // Order by [created_at] at [desc]
+        $registrations = Registration::orderBy('created_at', 'desc')->get();
+
+        return view('demo.show', ['registrations' => $registrations]);
+    }
+
     public function store(Request $request)
     {
         try {

@@ -24,6 +24,8 @@ Route::post('/demo/registration', [RegistrationController::class, 'store'])->nam
 Route::get('/demo/confirmation', [ConfirmationController::class, 'index'])->name('demo.confirmation');
 Route::get('/demo/failed', [FailedController::class, 'index'])->name('demo.failed');
 
+Route::get('/demo/show', [RegistrationController::class, 'show'])->name('demo.show');
+
 /*
 Auth::routes();
 
