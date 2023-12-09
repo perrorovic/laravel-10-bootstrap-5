@@ -69,3 +69,39 @@ https://github.com/perrorovic/laravel-registration-app/assets/114989131/b215ce8b
 ## Known Issues
 
 - Both of `/demo/confirmation` and `/demo/failed` route is open and can be accessed directly. This route should be open only for those who pass it from `RegistrationController` (need to setup middleware)
+
+## Set your local enviroment settings :
+
+**Setup your Node :**
+
+     - Install nvm and use latest version
+     - env var: [NVM HOME:"path-to\nvm"]
+     - env var: [NVM SYSLINK:"C:\Program Files\nodejs"]
+
+**Setup your PHP :**
+
+     - env var: [Path:"path-to\php"]
+
+**Enable these PHP extension in .ini file :**
+
+     - extension=curl
+     - extension=fileinfo 
+     - extension=gd
+     - extension=mbstring 
+     - extension=openssl 
+     - extension=pdo_mysql
+
+**Setup your PHP in VScode path :**
+
+     1. Open VScode settings and search "php"
+     2. Validate: Executable Path ("php.validate.executablePath") 
+     3. Validate: Enable (checked)
+
+**Setup your project :**
+
+     1. Copy .env.example and set for your env (make the same database name with the one listed in .env.example)
+     2. Run "php artisan key:generate" if the application ask for keys
+     3. Run "composer update"
+     4. Run "npm run db:new"
+     5. Run "npm start"
+
